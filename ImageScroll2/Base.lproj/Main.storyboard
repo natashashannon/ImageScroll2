@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bvi-hv-6Ig">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Z8L-Yn-n6e">
+            <objects>
+                <tableViewController id="bvi-hv-6Ig" customClass="ViewController" customModule="ImageScroll2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Dx-L2-okw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="300" id="zAD-yW-Xz6" customClass="PhotoCell" customModule="ImageScroll2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zAD-yW-Xz6" id="CTA-jx-Tag">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uf8-em-ZmB">
+                                            <rect key="frame" x="28" y="28" width="319" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EEj-CQ-sJm">
+                                            <rect key="frame" x="28" y="65" width="319" height="206.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EEj-CQ-sJm" firstAttribute="leading" secondItem="CTA-jx-Tag" secondAttribute="leadingMargin" constant="20" id="2MF-YG-Oo6"/>
+                                        <constraint firstItem="Uf8-em-ZmB" firstAttribute="leading" secondItem="CTA-jx-Tag" secondAttribute="leadingMargin" constant="20" id="4Nb-kj-lc1"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="EEj-CQ-sJm" secondAttribute="bottom" constant="20" id="Khl-Av-Vhm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="EEj-CQ-sJm" secondAttribute="trailing" constant="20" id="N3X-54-L6q"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Uf8-em-ZmB" secondAttribute="trailing" constant="20" id="VKI-CC-Tgu"/>
+                                        <constraint firstItem="EEj-CQ-sJm" firstAttribute="top" secondItem="Uf8-em-ZmB" secondAttribute="bottom" constant="16" id="eW4-TD-UJx"/>
+                                        <constraint firstItem="Uf8-em-ZmB" firstAttribute="top" secondItem="CTA-jx-Tag" secondAttribute="topMargin" constant="20" id="mJv-a6-BRc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="photoImageView" destination="EEj-CQ-sJm" id="0Re-KL-bbL"/>
+                                    <outlet property="photoLabel" destination="Uf8-em-ZmB" id="7sA-OP-yEJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bvi-hv-6Ig" id="3zi-1b-7yR"/>
+                            <outlet property="delegate" destination="bvi-hv-6Ig" id="TjD-MO-3mc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9KJ-pM-Fwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="-36"/>
+        </scene>
+    </scenes>
+</document>
